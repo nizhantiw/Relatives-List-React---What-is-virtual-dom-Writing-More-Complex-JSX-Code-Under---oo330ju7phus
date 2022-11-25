@@ -3,27 +3,18 @@ import '../styles/App.css';
 
 class App extends Component {
     render() {
-        const relativeList=[
-            {relativeListItem: 'Sidhu Moose Wala', key: 0},
-            {relativeListItem: 'Jon Bossmmana', key: 1},
-            {relativeListItem: 'Diljit Dosanjh', key: 2}
-            ];
+        const relatives=["Sidhu Moosewala", "Diljit Dosanjh", "Jon Bomassas"]
+            
 
         return(
             
-            <div id="main">
-            <ol>
-               {/* Do not remove the main div */ relativeList.map(relative =>{
-            return (
-            <li key={relative.key}<{relative.relativeListItem}</li>
-);
-})}
-</ol>
-);
-            </div>
-        )
-    }
+     <ol key="relativeList">
+        {relatives.map((relative, index) => (
+          <li key={`relativeListItem${index + 1}`}>{relative}</li>
+        ))}
+      </ol>
+    );
+  }
 }
-
 
 export default App;
